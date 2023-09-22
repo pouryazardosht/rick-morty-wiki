@@ -1,0 +1,40 @@
+@import "../variables";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-color;
+}
+a {
+  text-decoration: none !important;
+}
+span {
+  font-weight: 600;
+  padding: 7px;
+  border-radius: 8px;
+  color: #ffff;
+}
+.alive {
+  background-color: green;
+}
+.unknown {
+  background-color: $dark-color;
+}
+.dead {
+  background-color: red;
+}
+.human::before {
+  content: "👤 ";
+}
+.alien::before {
+  content: "👾 ";
+}
+.male::before {
+  content: "♂ ";
+}
+.female::before {
+  content: "♀ ";
+}

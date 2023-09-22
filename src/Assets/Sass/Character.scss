@@ -1,0 +1,72 @@
+@import "../variables";
+.card-info-container {
+  display: flex;
+  justify-content: center;
+  .character-info {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: $seccond-color;
+    .name-card {
+      display: flex;
+      // align-items: center;
+      img {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+      }
+
+      .personal-info {
+        margin: 50px 50px 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+          margin: 10px 0;
+          color: #f1f1f1;
+          font-size: 23px;
+          width: 235px;
+          font-weight: 700;
+          text-align: center;
+        }
+        .more-card {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin-left: 70px;
+          p {
+            margin: 10px 0;
+            color: #f1f1f1;
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .name-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 80% !important;
+      height: fit-content !important;
+    }
+    .personal-info {
+      margin: 50px 0 0 0 !important;
+    }
+    .more-card {
+      margin-left: 0 !important;
+      p {
+        margin: 0 0 !important;
+      }
+    }
+  }
+}
