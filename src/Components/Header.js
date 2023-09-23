@@ -15,7 +15,15 @@ const Header = () => {
                 setData(res.data.results)
             })
     }, []);
-
+    const [filteredUsers, setFilteredUsers] = useState([]);
+    const searchHandler = (event) => {
+        const searchTerm = event.target.value;
+        setSearch(searchTerm);
+        const filteredItems = data.filter((user) =>
+            user.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredUsers(filteredItems);
+    }
     return (
         <section className='section' >
             <header className='header'>
@@ -28,12 +36,16 @@ const Header = () => {
                             placeholder='Find Character...'
                             type="text"
                             data-bs-toggle="dropdown"
-                            onChange={e => setSearch(e.target.value)} />
+                            onChange={searchHandler}
+                            value={search} />
                         <div className='dropdown'>
                             <ul className="dropdown-menu">
-                                {data.length ? data.map(e => (
+                                {search ? filteredUsers.map(e => (
                                     <SearchResult key={v4()} id={e.id} name={e.name} image={e.image} />
-                                )) : <div className="loader"></div>}
+                                )) : data.length ? data.map(e => (
+                                    <SearchResult key={v4()} id={e.id} name={e.name} image={e.image} />
+                                )
+                                ) : <div>not found</div>}
                             </ul>
                         </div>
                         <a

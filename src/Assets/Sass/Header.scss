@@ -21,6 +21,7 @@
     font-size: 22px;
     font-weight: 500;
   }
+
   .github-icon {
     color: $dark-color;
     font-size: 30px;
@@ -34,7 +35,8 @@
   }
 }
 .dropdown-menu {
-  height: 300px;
+  height: fit-content;
+  max-height: 300px;
   overflow-y: scroll;
 }
 
