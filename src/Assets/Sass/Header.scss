@@ -21,7 +21,10 @@
     font-size: 22px;
     font-weight: 500;
   }
-
+  .github-icon {
+    color: $dark-color;
+    font-size: 30px;
+  }
   input[type="text"] {
     padding: 10px;
     border-radius: 8px;

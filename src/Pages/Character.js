@@ -7,6 +7,7 @@ import CharacterCard from '../Components/CharacterCard';
 import axios from 'axios';
 import useTitle from '../Hooks/useTitle';
 import { useParams } from 'react-router-dom';
+import Footer from '../Components/Footer';
 const API_KEY_CHARACHTER = 'https://rickandmortyapi.com/api/character';
 
 const Character = () => {
@@ -32,7 +33,6 @@ const Character = () => {
                 status={status}
 
             />
-
         </>
     );
 }
