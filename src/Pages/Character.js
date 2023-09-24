@@ -7,7 +7,6 @@ import CharacterCard from '../Components/CharacterCard';
 import axios from 'axios';
 import useTitle from '../Hooks/useTitle';
 import { useParams } from 'react-router-dom';
-import Footer from '../Components/Footer';
 const API_KEY_CHARACHTER = 'https://rickandmortyapi.com/api/character';
 
 const Character = () => {
@@ -20,7 +19,7 @@ const Character = () => {
             })
         // eslint-disable-next-line
     }, [])
-    const { name, image, gender, species, status, episode } = character;
+    const { name, image, gender, species, status } = character;
     useTitle(`${name} #${params.id}`);
     return (
         <>

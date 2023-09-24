@@ -45,7 +45,7 @@ const Header = () => {
                                 )) : data.length ? data.map(e => (
                                     <SearchResult key={v4()} id={e.id} name={e.name} image={e.image} />
                                 )
-                                ) : <div>not found</div>}
+                                ) : <div></div>}
                             </ul>
                         </div>
                         <a
